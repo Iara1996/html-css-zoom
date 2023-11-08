@@ -1,0 +1,118 @@
+/* #region common */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --black: #1f1e1e;
+    --black-light: #3533338d;
+    --gray: #4a4a4a;
+    --green: #47ad0c;
+    --red: #d11c2b;
+    --white: #fbfafa;
+}
+
+
+/* #rendegion common */
+
+/* #region utility */
+
+.container
+{
+    max-width: 1152px;
+    margin: auto;
+    width: 90%;
+
+}
+
+.d_flex
+{
+    display: flex;
+}
+
+.flex_wrap
+{
+    flex-wrap: wrap;
+}
+
+img
+{
+    max-width: 100%; /* 100% del proprio contenitore, cosi non danno fastidio */
+}
+/* #endregion utility */
+
+/* #region debug */
+
+.debug .wrapper
+{
+    background-color: red;
+}
+
+.debug .top_toolbar
+{
+    background-color: gray;
+}
+
+.debug .partecipant
+{
+    aspect-ratio: 1/1;
+    background-color: gray;
+}
+/* #endregion debug */
+
+/* #region main */
+
+body
+{
+    background-color: var(--black);
+}
+
+.wrapper
+{
+    height: 100vh;
+    position: relative;
+}
+
+.top
+{
+    height: calc(100% - 80px);
+}
+
+.top_toolbar
+{
+    padding: 1rem o;
+}
+
+.partecipants
+{
+    height: calc(100% - 80px); /* togliamo la dimensione della toolbar */
+    overflow-y: auto; /* fa apparire una scrollbar verticale */
+}
+
+.partecipants .container
+{
+    gap: 0.5rem;
+}
+
+.partecipants .partecipant
+{
+    width: calc((100% / 7) - 0.5rem);
+}
+
+.toolbar
+{
+    height: 80px;
+    background-color: var(--black-light);
+}
+/* #endregion main */
+
+/* #region footer */
+/* #endregion footer */
+
+
+
