@@ -9,12 +9,12 @@
 
 :root
 {
-    --black: #1f1e1e;
-    --black-light: #3533338d;
-    --gray: #4a4a4a;
-    --green: #47ad0c;
-    --red: #d11c2b;
-    --white: #fbfafa;
+    --zoom-black: black;
+    --zoom-dark: #222222;
+    --zoom-primary: #4a4a4a;
+    --zoom-success: #4bc800;
+    --zoom-danger: #f52838;
+    --zoom-white: white;
 }
 
 
@@ -40,10 +40,36 @@
     flex-wrap: wrap;
 }
 
+.justify_content_center
+{
+    justify-content: center;
+}
+
+.text_end
+{
+    align-items: end;
+}
+
+.btn
+{
+    background-color: transparent;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.btn_dark
+{
+    background-color: var(--zoom-primary);
+    color: var(--zoom-white);
+}
+
 img
 {
     max-width: 100%; /* 100% del proprio contenitore, cosi non danno fastidio */
 }
+
+
 /* #endregion utility */
 
 /* #region debug */
@@ -63,34 +89,41 @@ img
     aspect-ratio: 1/1;
     background-color: gray;
 }
+
+.debug .left, .debug .right, .debug .center
+{
+    border: 1px dashed white;
+    height: 100%;
+}
 /* #endregion debug */
 
 /* #region main */
 
 body
 {
-    background-color: var(--black);
+    background-color: var(--zoom-black);
 }
 
 .wrapper
 {
     height: 100vh;
-    position: relative;
+    overflow: hidden;
 }
 
 .top
 {
-    height: calc(100% - 80px);
+    height: calc(100% - 55px);
 }
 
 .top_toolbar
 {
-    padding: 1rem o;
+    padding: 0.5rem;
+    text-align: end;
 }
 
 .partecipants
 {
-    height: calc(100% - 80px); /* togliamo la dimensione della toolbar */
+    padding: 2rem 0;
     overflow-y: auto; /* fa apparire una scrollbar verticale */
 }
 
@@ -104,15 +137,40 @@ body
     width: calc((100% / 7) - 0.5rem);
 }
 
-.toolbar
-{
-    height: 80px;
-    background-color: var(--black-light);
-}
+
 /* #endregion main */
 
 /* #region footer */
+
+
+footer.toolbar
+{
+    
+    background-color: var(--zoom-dark);
+    display: flex;
+    color: var(--zoom-white);
+    align-items: center;
+}
+
+footer.toolbar > .left,
+footer.toolbar > .right
+{
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+footer.toolbar > .center
+{
+    flex-grow: 2;
+    padding: 0.5rem;
+}
+
+footer.toolbar > .left,
+footer.toolbar > .center,
+footer.toolbar > .right
+{
+    height: 100%
+}
+
 /* #endregion footer */
-
-
 
