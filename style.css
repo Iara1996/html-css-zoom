@@ -139,7 +139,7 @@ header i
 
 .top
 {
-    height: calc(100% - 100px); /*per spostare la barra dei controlli*/
+    height: calc(100% - 120px); /*per spostare la barra dei controlli*/
 }
 
 .top_toolbar
