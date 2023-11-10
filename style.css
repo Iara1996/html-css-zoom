@@ -112,7 +112,7 @@ body
 
 .top
 {
-    height: calc(100% - 55px);
+    height: calc(100% - 90px);
 }
 
 .top_toolbar
@@ -123,7 +123,7 @@ body
 
 .partecipants
 {
-    padding: 2rem 0;
+    padding: 1rem 0;
     overflow-y: auto; /* fa apparire una scrollbar verticale */
 }
 
@@ -135,6 +135,21 @@ body
 .partecipants .partecipant
 {
     width: calc((100% / 7) - 0.5rem);
+    position: relative;
+}
+
+.partecipant .username
+{
+    position: absolute;
+    bottom: 0.50rem;
+    left: 0;
+    background-color: var(--zoom-primary);
+    padding: 0.05rem 0.25rem 0.05rem 0rem;
+    overflow: hidden;
+    color: var(--zoom-white);
+    font-size: 11px;
+    border-bottom-right-radius: 0.20rem;
+    border-top-right-radius: 0.20rem;
 }
 
 
