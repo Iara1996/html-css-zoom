@@ -164,6 +164,13 @@ header i
 {
     width: calc((100% / 7) - 0.5rem);
     position: relative;
+    transition: all 500ms;
+}
+
+.partecipant:hover
+{
+    border: 4px solid white;
+    transform: scale(1.1)
 }
 
 .partecipant .username
