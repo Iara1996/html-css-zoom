@@ -134,7 +134,7 @@ header i
 .wrapper
 {
     height: 100vh;
-    overflow: hidden;
+      /* overflow: hidden;  - NASCONDE QUELLO CHE NON ENTRA NELLA DIMENSIONE DEL .erapper */
 }
 
 .top
